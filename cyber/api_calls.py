@@ -54,3 +54,8 @@ def status():
    validator = requests.get('https://lcd.bostromdev.cybernode.ai/cosmos/staking/v1beta1/validators/bostromvaloper1ke7kxdn29w2lrxt9dzusa6shvmwd8xm9suu4j2')
    data = validator.json()['validator']['jailed']
    return (data)
+
+def links():
+   links = requests.get('https://lcd.bostromdev.cybernode.ai/graph/amount_links')
+   data = links.json()['result']['amount']
+   return (data)
